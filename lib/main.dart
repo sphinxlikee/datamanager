@@ -30,7 +30,10 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('navbar'),
+            Text(
+              'navbar',
+              style: TextStyle(fontSize: 30),
+            ),
             Text('content'),
           ],
         ),
