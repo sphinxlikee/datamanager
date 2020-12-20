@@ -27,6 +27,7 @@ class MyHomePage extends StatelessWidget {
       body: Container(
         width: double.infinity,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('navbar'),
             Text('content'),
