@@ -25,13 +25,12 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: 150,
         width: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'navbar',
+              'Navigation bar',
               style: TextStyle(fontSize: 30),
             ),
             Text('content'),
