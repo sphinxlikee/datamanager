@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 void main() {
+  // TODO: look at this line in the future for gradient issues
+  // Paint.enableDithering = true;
   runApp(MyApp());
 }
 
@@ -9,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Project Init',
+      title: 'IoT Data Manager',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -22,8 +24,20 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('centered text'),
+      body: Container(
+        child: Center(
+          child: Text('centered text'),
+        ),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.bottomLeft,
+            end: Alignment.topRight,
+            colors: [
+              Colors.lightBlueAccent,
+              Colors.green,
+            ],
+          ),
+        ),
       ),
     );
   }
