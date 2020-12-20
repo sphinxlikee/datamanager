@@ -25,8 +25,11 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Center(
-          child: Text('centered text'),
+        child: Column(
+          children: [
+            Text('navbar'),
+            Text('content'),
+          ],
         ),
         decoration: BoxDecoration(
           gradient: LinearGradient(
