@@ -23,9 +23,38 @@ class DesktopNavigationBar extends StatelessWidget {
             NavigationBarLogoPart(),
             Row(
               children: [
-                Text('Page1'),
-                Text('Page2'),
-                Text('Login'),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                  child: FlatButton(
+                    child: Text(
+                      'About Us',
+                      style: TextStyle(color: Colors.black, fontSize: 16.0),
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                  child: FlatButton(
+                    child: Text(
+                      'Products',
+                      style: TextStyle(color: Colors.black, fontSize: 16.0),
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: FlatButton.icon(
+                    color: Colors.amberAccent,
+                    icon: Icon(Icons.account_box_outlined),
+                    label: Text(
+                      'Login',
+                      style: TextStyle(color: Colors.black, fontSize: 16.0),
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
               ],
             ),
           ],
