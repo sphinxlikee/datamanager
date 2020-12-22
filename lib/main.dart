@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './screen/widget/navigation_bar.dart';
 
 void main() {
   // TODO: look at this line in the future for gradient issues
@@ -26,25 +27,22 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Navigation bar',
-              style: TextStyle(fontSize: 30),
-            ),
-            Text('content'),
-          ],
-        ),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.bottomLeft,
             end: Alignment.topRight,
             colors: [
-              Colors.lightBlueAccent,
-              Colors.green,
+              Colors.blue.shade300,
+              Colors.green.shade500,
             ],
           ),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            NavigationBar(),
+            Text('content'),
+          ],
         ),
       ),
     );
