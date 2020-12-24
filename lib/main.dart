@@ -32,16 +32,57 @@ class MyHomePage extends StatelessWidget {
             begin: Alignment.bottomLeft,
             end: Alignment.topRight,
             colors: [
-              Colors.blue.shade300,
-              Colors.green.shade500,
+              Colors.blue.shade200,
+              Colors.green.shade300,
             ],
           ),
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             NavigationBar(),
-            Text('content'),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 128.0,
+                  vertical: 32.0,
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.fitWidth,
+                      image: AssetImage('/images/earth.jpg'),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'widget1',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 36.0, color: Colors.white),
+                        ),
+                      ),
+                      Expanded(
+                        child: Text(
+                          'widget2',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 36.0, color: Colors.white),
+                        ),
+                      ),
+                      Expanded(
+                        child: Text(
+                          'widget3',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 36.0, color: Colors.white),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
