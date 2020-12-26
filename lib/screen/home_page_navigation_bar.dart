@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class NavigationBar extends StatelessWidget {
+class HomePageNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -20,43 +20,8 @@ class DesktopNavigationBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            NavigationBarLogoPart(),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                  child: FlatButton(
-                    child: Text(
-                      'About Us',
-                      style: TextStyle(color: Colors.black, fontSize: 16.0),
-                    ),
-                    onPressed: () {},
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                  child: FlatButton(
-                    child: Text(
-                      'Products',
-                      style: TextStyle(color: Colors.black, fontSize: 16.0),
-                    ),
-                    onPressed: () {},
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: FlatButton.icon(
-                    color: Colors.amberAccent,
-                    icon: Icon(Icons.account_box_outlined),
-                    label: Text(
-                      'Login',
-                      style: TextStyle(color: Colors.black, fontSize: 16.0),
-                    ),
-                    onPressed: () {},
-                  ),
-                ),
-              ],
-            ),
+            NavigationBarLogo(),
+            NavigationBarRoutes(),
           ],
         ),
       ),
@@ -64,7 +29,49 @@ class DesktopNavigationBar extends StatelessWidget {
   }
 }
 
-class NavigationBarLogoPart extends StatelessWidget {
+class NavigationBarRoutes extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          child: FlatButton(
+            child: Text(
+              'About Us',
+              style: TextStyle(color: Colors.black, fontSize: 16.0),
+            ),
+            onPressed: () {},
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          child: FlatButton(
+            child: Text(
+              'Products',
+              style: TextStyle(color: Colors.black, fontSize: 16.0),
+            ),
+            onPressed: () {},
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: FlatButton.icon(
+            color: Colors.amberAccent,
+            icon: Icon(Icons.account_box_outlined),
+            label: Text(
+              'Login',
+              style: TextStyle(color: Colors.black, fontSize: 16.0),
+            ),
+            onPressed: () {},
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class NavigationBarLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
