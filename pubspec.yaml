@@ -48,6 +48,7 @@ flutter:
   assets:
     - assets/images/drive.png
     - assets/images/earth.jpg
+    - assets/images/healthcare.jpg
 
 
   #   - images/a_dot_ham.jpeg
